@@ -9,7 +9,7 @@ def convert_file():
     csv_file = csv.reader(open(csv_data))
     #load_csv_data = csv.reader(csv_file)
     # READ the xml file
-    xml_file = 'myall.xml'
+    xml_file = 'FileXML.xml'
     load_xml_data = open(xml_file, 'w')
     #initialize the Self-Describing tag.
     load_xml_data.write('<?xml version="1.0" encoding="UTF-8"?>' + "\n")
@@ -24,10 +24,10 @@ def convert_file():
             for i in range(len(elements)):
                 elements[i] = elements[i].replace(' ', '_')
         else:
-            load_xml_data.write("\t" +'<flight>' + "\n")
+            load_xml_data.write("\t" +'<column>' + "\n")
             for i in range(len(elements)):
                 load_xml_data.write('\t\t' + '<' + elements[i] + '>' + row[i] + '</' + elements[i] + '>' + "\n")
-            load_xml_data.write("\t" + '</flight>' + "\n")
+            load_xml_data.write("\t" + '</column>' + "\n")
         index += 1
 # Add the end tags.
     load_xml_data.write('</newline>' + "\n")
