@@ -14,7 +14,7 @@ def convert_file():
     #initialize the Self-Describing tag.
     load_xml_data.write('<?xml version="1.0" encoding="UTF-8"?>' + "\n")
     # the start tags will be added
-    load_xml_data.write('<nguay089>' + "\n")
+    load_xml_data.write('<newline>' + "\n")
     index = 0
     # with each row in the csv file, for loop will load the content into the tags. 
     for row in csv_file: 
@@ -30,7 +30,7 @@ def convert_file():
             load_xml_data.write("\t" + '</flight>' + "\n")
         index += 1
 # Add the end tags.
-    load_xml_data.write('</nguay089>' + "\n")
+    load_xml_data.write('</newline>' + "\n")
     load_xml_data.close()
 
 if __name__ == '__main__':
